@@ -4,6 +4,8 @@ import IconShirt from './shirt.svg';
 import IconShirtAktif from './shirt-aktif.svg';
 import IconUserAktif from './user.svg';
 import IconUser from './user-aktif.svg';
+import IconSearch from './search.svg';
+import IconKeranjang from './keranjang.svg'
 
 export {
     IconHome,
@@ -11,5 +13,7 @@ export {
     IconShirt,
     IconShirtAktif,
     IconUser,
-    IconUserAktif
+    IconUserAktif,
+    IconKeranjang,
+    IconSearch
 }

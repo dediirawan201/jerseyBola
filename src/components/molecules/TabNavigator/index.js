@@ -1,8 +1,8 @@
 import {StyleSheet, Text, TouchableOpacity} from 'react-native';
 import React from 'react';
 import {IconHome, IconHomeAktif, IconShirt, IconShirtAktif, IconUser, IconUserAktif} from '../../../assets'
-import { colors } from '../../../utils';
-const TabNavigator = ({isFocused, onLongPress, onPress, label}) => {
+import { colors, fonts } from '../../../utils';
+const TabNavigator = ({isFocused, onLongPress, onPress, label,key}) => {
     const Icon = () => {
         if(label === 'Home'){
             return isFocused ? <IconHome/> : <IconHomeAktif/>
@@ -21,8 +21,9 @@ const TabNavigator = ({isFocused, onLongPress, onPress, label}) => {
       accessibilityState={isFocused ? {selected: true} : {}}
       onPress={onPress}
       onLongPress={onLongPress}
+      key={key} 
       style={styles.container}>
-        <Icon/>
+        <Icon />
       <Text style={styles.text(isFocused)}>{label}</Text>
     </TouchableOpacity>
   );
@@ -36,7 +37,8 @@ const styles = StyleSheet.create({
         flex:1
     },
     text: isFocused => ({
-        color: isFocused ? '#FFFFFF' : colors.secondary
+        color: isFocused ? '#FFFFFF' : colors.secondary,
+        fontFamily:fonts.primary.bold
     })
     
 });

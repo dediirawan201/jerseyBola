@@ -1,7 +1,7 @@
 import {View, Text, TouchableOpacity, StyleSheet} from 'react-native';
 import React from 'react';
 import TabNavigator from '../TabNavigator';
-import { colors } from '../../../utils';
+import { colors, fonts } from '../../../utils';
 
 const BottomNavigator = ({state, descriptors, navigation}) => {
   return (
@@ -43,6 +43,7 @@ const BottomNavigator = ({state, descriptors, navigation}) => {
             onLongPress={onLongPress}
             isFocused={isFocused}
             label={label}
+            key={index}
           />
         );
       })}
@@ -59,6 +60,7 @@ const styles = StyleSheet.create({
     paddingVertical:8,
     marginHorizontal:30,
     marginBottom:30,
-    borderRadius:5
+    borderRadius:5,
+    
   }
 })
