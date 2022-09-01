@@ -44,6 +44,7 @@ const BottomNavigator = ({state, descriptors, navigation}) => {
             isFocused={isFocused}
             label={label}
             key={index}
+            options={options.tabBarAccessibilityLabel}
           />
         );
       })}
@@ -61,6 +62,8 @@ const styles = StyleSheet.create({
     marginHorizontal:30,
     marginBottom:30,
     borderRadius:5,
+    position:'absolute',
+    bottom:0
     
   }
 })

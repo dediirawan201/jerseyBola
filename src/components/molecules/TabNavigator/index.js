@@ -2,7 +2,7 @@ import {StyleSheet, Text, TouchableOpacity} from 'react-native';
 import React from 'react';
 import {IconHome, IconHomeAktif, IconShirt, IconShirtAktif, IconUser, IconUserAktif} from '../../../assets'
 import { colors, fonts } from '../../../utils';
-const TabNavigator = ({isFocused, onLongPress, onPress, label,key}) => {
+const TabNavigator = ({isFocused, onLongPress, onPress, label,key,options}) => {
     const Icon = () => {
         if(label === 'Home'){
             return isFocused ? <IconHome/> : <IconHomeAktif/>
@@ -18,6 +18,7 @@ const TabNavigator = ({isFocused, onLongPress, onPress, label,key}) => {
   return (
     <TouchableOpacity
       accessibilityRole="button"
+      accessibilityLabel={options}
       accessibilityState={isFocused ? {selected: true} : {}}
       onPress={onPress}
       onLongPress={onLongPress}

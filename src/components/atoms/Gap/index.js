@@ -1,5 +1,6 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { Dimensions, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
+import { responsiveHeight, responsiveWidth } from '../../../utils'
 
 const Gap = ({height, width}) => {
   return (
@@ -9,4 +10,6 @@ const Gap = ({height, width}) => {
 
 export default Gap
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+  
+})

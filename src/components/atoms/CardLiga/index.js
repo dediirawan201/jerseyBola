@@ -3,7 +3,7 @@ import React from 'react';
 
 const CardLiga = ({img}) => {
   return (
-    <TouchableOpacity style={styles.container}>
+    <TouchableOpacity style={styles.container}> 
       <Image source={img} />
     </TouchableOpacity>
   );

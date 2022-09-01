@@ -4,12 +4,12 @@ import {colors, responsiveHeight} from '../../../utils';
 import {Button, Input} from '../../atoms';
 import {IconKeranjang, IconSearch} from '../../../assets';
 
-const Header = () => {
+const Header = ({placeholder}) => {
   return (
       <View style={styles.container}>
         <View style={styles.wrapper}>
             <IconSearch />
-            <Input />
+            <Input placeholder={placeholder} />
         </View>
       <View>
         <Button type='iconOnly' icon='keranjang'/>
@@ -24,7 +24,8 @@ export default Header;
 const styles = StyleSheet.create({
   container: { 
     marginTop:16,
-    flexDirection:'row'
+    flexDirection:'row',
+   
   },
   wrapper:{
     backgroundColor:colors.white,

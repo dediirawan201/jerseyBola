@@ -6,6 +6,14 @@ import IconUserAktif from './user.svg';
 import IconUser from './user-aktif.svg';
 import IconSearch from './search.svg';
 import IconKeranjang from './keranjang.svg'
+import IconHistory from './history.svg'
+import IconPassword from './password.svg'
+import IconSignOut from './sign-out.svg'
+import IconEditProfile from './user-edit.svg'
+import IconArrow from './arrow.svg'
+import IconBack from './back.svg'
+import IconKeranjangPutih from './keranjang-putih.svg';
+
 
 export {
     IconHome,
@@ -15,5 +23,12 @@ export {
     IconUser,
     IconUserAktif,
     IconKeranjang,
-    IconSearch
+    IconSearch,
+    IconEditProfile,
+    IconPassword,
+    IconHistory,
+    IconSignOut,
+    IconArrow,
+    IconBack,
+    IconKeranjangPutih
 }
