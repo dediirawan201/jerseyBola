@@ -3,7 +3,7 @@ import React from 'react';
 export const dummyMenus = [
     {
         id:1,
-        nama: 'Edit Profile',
+        nama: 'Edit Profile', 
         gambar: <IconEditProfile/>,
         halaman: 'EditProfile'
     },

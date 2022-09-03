@@ -7,6 +7,7 @@ import ListJersey from './ListJersey';
 import ListMenu from './ListMenu';
 import JerseySlider from './JerseySlider';
 import ListKeranjang from './ListKeranjang';
+import ListHistory from './ListHistory';
 
 
 export {
@@ -18,5 +19,6 @@ export {
   ListLiga,
   ListMenu,
   JerseySlider,
-  ListKeranjang
+  ListKeranjang,
+  ListHistory
 };

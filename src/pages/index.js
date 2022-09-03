@@ -7,6 +7,7 @@ import Keranjang from './Keranjang';
 import CheckOut from './CheckOut';
 import EditProfile from './EditProfile';
 import EditPassword from './EditPassword';
+import EditHostory from './EditHistory';
 
 export {
   Home,
@@ -17,5 +18,6 @@ export {
   Keranjang,
   CheckOut,
   EditProfile,
-  EditPassword
+  EditPassword,
+  EditHostory
 };

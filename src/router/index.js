@@ -10,6 +10,7 @@ import {
   CheckOut,
   EditProfile,
   EditPassword,
+  EditHostory,
 } from '../pages';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
@@ -69,6 +70,11 @@ const Router = () => {
         name="EditPassword"
         component={EditPassword}
         options={{title: 'Edit Password'}}
+      />
+      <Stack.Screen
+        name="History"
+        component={EditHostory}
+        options={{title: 'History Pesanan'}}
       />
     </Stack.Navigator>
   );
