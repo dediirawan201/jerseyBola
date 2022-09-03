@@ -5,5 +5,6 @@ import CardLiga from "./CardLiga";
 import CardJersey from "./CardJersey";
 import CardMenu from './CardMenu'
 import Choose from "./Choose";
+import CardKeranjang from "./CardKeranjang";
 
-export {Input,Button, Gap,CardLiga,CardJersey, CardMenu,Choose}
+export {Input,Button, Gap,CardLiga,CardJersey, CardMenu,Choose,CardKeranjang}

@@ -4,6 +4,7 @@ import {BannerSlider, Button, Gap, Header, ListJersey, ListLiga} from '../../com
 import {colors, fonts, responsiveHeight} from '../../utils';
 import Carousel from '../../components/molecules/BannerSlider/Carousel';
 import dummyData from '../../assets/data/dummyLigas'
+import { dummyJerseys } from '../../assets';
 const Jersey = () => {
   console.log(dummyData) 
   return (
@@ -19,7 +20,23 @@ const Jersey = () => {
         <Gap height={20} />
         <Text>Pilih <Text style={{fontFamily:fonts.primary.bold,color:'black'}}>Jersey</Text> yang Anda Inginkan</Text>
         <Gap height={21}/>
-        <ListJersey/>
+        <View
+            style={{
+              flexDirection: 'row',
+              flexWrap: 'wrap',
+              justifyContent: 'space-between',
+            }}>
+            {dummyJerseys.map(jersey => {
+              return (
+                <ListJersey
+                  key={jersey.id}
+                  gambar={jersey.gambar[0]}
+                  nama={jersey.nama}
+                  onPress={() => navigation.navigate('JerseyDetail', jersey)}
+                />
+              );
+            })}
+          </View>
         <Gap height={250}/>
         </ScrollView>
       </View>

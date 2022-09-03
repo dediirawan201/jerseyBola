@@ -4,15 +4,15 @@ import {colors, responsiveHeight} from '../../../utils';
 import {Button, Input} from '../../atoms';
 import {IconKeranjang, IconSearch} from '../../../assets';
 
-const Header = ({placeholder}) => {
+const Header = ({placeholder,onPress}) => {
   return (
       <View style={styles.container}>
         <View style={styles.wrapper}>
-            <IconSearch />
+            <IconSearch  />
             <Input placeholder={placeholder} />
         </View>
       <View>
-        <Button type='iconOnly' icon='keranjang'/>
+        <Button type='iconOnly' icon='keranjang' onPress={onPress}/>
       </View>
       </View>
 

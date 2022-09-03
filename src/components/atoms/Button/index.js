@@ -1,9 +1,10 @@
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import React from 'react';
 import Icon from './Icon';
-import {colors} from '../../../utils';
+import {colors, fonts, heightMobileUI} from '../../../utils';
 import { IconKeranjang } from '../../../assets';
 import IconText from './IconText';
+import {RFValue} from 'react-native-responsive-fontsize';
 
 const Button = ({type, icon, onPress, title, align, zindex, position,left,top, warna}) => {
   if (type === 'iconOnly') {
@@ -14,7 +15,7 @@ const Button = ({type, icon, onPress, title, align, zindex, position,left,top, w
   }
   return (
     <TouchableOpacity style={styles.container} onPress={onPress}>
-      {type === 'iconText' ? <IconText title={title}/> : <Text style={styles.text(align)}>{title}</Text> }
+      {type === 'iconText' ? <IconText onPress={onPress} title={title}/> : <Text style={styles.text(align)}>{title}</Text> }
     </TouchableOpacity>
   );
 };
@@ -30,5 +31,7 @@ const styles = StyleSheet.create({
   text: align => ({
     textAlign: align,
     color: colors.white,
+    fontFamily:fonts.primary.bold,
+    fontSize:RFValue(18,heightMobileUI)
   }),
 });

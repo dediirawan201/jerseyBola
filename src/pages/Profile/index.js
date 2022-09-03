@@ -8,12 +8,13 @@ import {
   responsiveWidth,
   widthMobileUI,
 } from '../../utils';
-import {dummyProfile} from '../../assets';
+import {dummyMenus, dummyProfile} from '../../assets';
 import {RFValue} from 'react-native-responsive-fontsize';
 import {Gap, ListMenu} from '../../components';
 
-const Profile = () => {
+const Profile = ({navigation}) => {
   const data = dummyProfile;
+  const dataMenu = dummyMenus;
   return (
     <View style={styles.page}>
       <View style={styles.container}>
@@ -23,9 +24,9 @@ const Profile = () => {
         <Gap height={5} />
         <Text style={styles.desc}>No.HP : {data.nomerHp}</Text>
         <Text style={styles.desc}>
-          {data.alamat} {data.kota} {data.provinsi}
+          {data.alamat} {data.kota} {data.provinsi} 
         </Text>
-          <ListMenu />
+          <ListMenu data={data} navigation={navigation} menu={dataMenu}/>
       </View>
     </View>
   );

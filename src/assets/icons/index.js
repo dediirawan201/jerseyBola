@@ -13,7 +13,8 @@ import IconEditProfile from './user-edit.svg'
 import IconArrow from './arrow.svg'
 import IconBack from './back.svg'
 import IconKeranjangPutih from './keranjang-putih.svg';
-
+import IconDelete from './delete.svg'
+import IconArrowRight from './arrow-right.svg'
 
 export {
     IconHome,
@@ -30,5 +31,7 @@ export {
     IconSignOut,
     IconArrow,
     IconBack,
-    IconKeranjangPutih
+    IconKeranjangPutih,
+    IconDelete,
+    IconArrowRight
 }

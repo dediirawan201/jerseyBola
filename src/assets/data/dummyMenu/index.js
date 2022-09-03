@@ -5,13 +5,13 @@ export const dummyMenus = [
         id:1,
         nama: 'Edit Profile',
         gambar: <IconEditProfile/>,
-        halaman: 'Edit Profile'
+        halaman: 'EditProfile'
     },
     {
         id:2,
         nama: 'Change Password',
         gambar: <IconPassword/>,
-        halaman: 'Edit Password'
+        halaman: 'EditPassword'
     },
     {
         id:3,

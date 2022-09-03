@@ -14,10 +14,10 @@ import {Button, CardLiga, Choose, Gap, Input, JerseySlider, ListMenu} from '../.
 
 const JerseyDetail = ({navigation,route}) => {
   const dataJersey = route.params;
-  return (
+  return ( 
     <View style={styles.page}>
       <JerseySlider gambar={dataJersey.gambar}/>
-        {/* <Image source={dataJersey.gambar[0]} style={styles.shirt} /> */}
+        <Image source={dataJersey.gambar[0]} style={styles.shirt} />
         <Button type="iconOnly" icon="back" position='absolute' onPress={() => navigation.goBack()}  left={30} top={20} />
  
       <View style={styles.container}>
@@ -44,6 +44,7 @@ const JerseyDetail = ({navigation,route}) => {
         <Gap height={22}/>
         <Button type='iconText' title='Masukkan Keranjang' icon='keranjang'/>
       </View>
+
     </View>
   );
 };

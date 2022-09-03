@@ -1,17 +1,25 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React from 'react'
-import { IconKeranjangPutih } from '../../../assets';
+import { IconArrowRight, IconKeranjangPutih } from '../../../assets';
 import Gap from '../Gap';
 import { colors, fonts, heightMobileUI, responsiveHeight } from '../../../utils';
 import {RFValue} from 'react-native-responsive-fontsize';
 
-const IconText = ({title}) => {
+const IconText = ({title,onPress}) => {
+  const TextIcon = () => {
+    if(title === 'masukan keranjang'){
+      return <IconKeranjangPutih/>
+    }
+    if(title === 'check out' || 'bayar' || 'submit'){
+      return <IconArrowRight/>
+    }
+  }
   return (
-    <View style={styles.container}>
-        <IconKeranjangPutih/>
+    <TouchableOpacity onPress={onPress} style={styles.container}>
+        <TextIcon/>
         <Gap width={10}/>
       <Text style={styles.text}>{title}</Text>
-    </View>
+    </TouchableOpacity>
   )
 }
 
@@ -21,11 +29,13 @@ const styles = StyleSheet.create({
     container:{
         flexDirection:'row',
         justifyContent:'center',
-        padding:responsiveHeight(8)
+        padding:responsiveHeight(8),
+        alignItems:'center'
     },
     text:{
         color:colors.white,
-        fontSize:RFValue(18, heightMobileUI),
-        fontFamily:fonts.primary.semiBold
+        fontSize:RFValue(24, heightMobileUI),
+        fontFamily:fonts.primary.semiBold,
+        textTransform:'capitalize'
     }
 })

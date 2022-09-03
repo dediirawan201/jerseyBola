@@ -4,11 +4,11 @@ import { IconArrow } from '../../../assets';
 import { colors, fonts, heightMobileUI, responsiveHeight, responsiveWidth, widthMobileUI } from '../../../utils';
 import {RFValue} from 'react-native-responsive-fontsize';
 
-const CardMenu = ({nama,gambar}) => {
+const CardMenu = ({nama,gambar, menu,navigation}) => {
   return (
-    <TouchableOpacity style={styles.container}>
+    <TouchableOpacity onPress={() => navigation.navigate(menu.halaman)} style={styles.container}>
       {gambar}
-  <Text style={styles.menuNama}>{nama}</Text>
+  <Text style={styles.menuNama}>{nama}</Text> 
   <IconArrow/>
     </TouchableOpacity>
   )
